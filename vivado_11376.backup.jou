@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Apr 23 22:13:47 2024
+# Process ID: 11376
+# Current directory: C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Final Project/sd_card_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11904 C:\Users\Calypso\Documents\- - - UIUC Academics\Spring 2024\ECE 385\Final Project\sd_card_test\sd_card_test.xpr
+# Log file: C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Final Project/sd_card_test/vivado.log
+# Journal file: C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Final Project/sd_card_test\vivado.jou
+# Running On: Calypso, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 4, Host memory: 16048 MB
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Final Project/sd_card_test/sd_card_test.xpr}
+import_files -norecurse {{C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Lab 7/font_rom.sv}}
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open {C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Final Project/sd_card_test/sd_card_test.srcs/sim_1/new/testbench.sv} w ]
+add_files -fileset sim_1 {{C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Final Project/sd_card_test/sd_card_test.srcs/sim_1/new/testbench.sv}}
+launch_simulation
+source sdcard_init.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top testbench [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
+launch_simulation
+source testbench.tcl
+relaunch_sim
+relaunch_sim
+export_ip_user_files -of_objects  [get_files {{C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Final Project/sd_card_test/sd_card_test.srcs/sim_1/new/pwm.sv}}] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 {{C:/Users/Calypso/Documents/- - - UIUC Academics/Spring 2024/ECE 385/Final Project/sd_card_test/sd_card_test.srcs/sim_1/new/pwm.sv}}
+relaunch_sim
+close_sim
+launch_simulation
+source testbench.tcl
+close_sim
